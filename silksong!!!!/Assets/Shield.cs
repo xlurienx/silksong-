@@ -1,36 +1,27 @@
 using UnityEngine;
 
-public class Shield : MonoBehaviour
+public class ShowObjectOnInput : MonoBehaviour
 {
-    public float speed = 5;
-    public Rigidbody2D rb;
-    public GameObject shieldObject;
-
-    Vector2 input;
+    public GameObject targetObject; // The object to show
+    public KeyCode activationKey = KeyCode.E; // Set which key to press
 
     void Start()
     {
-        if (shieldObject != null)
-            shieldObject.SetActive(false);
+        // Optional: hide the object at the start
+        if (targetObject != null)
+        {
+            targetObject.SetActive(false);
+        }
     }
 
     void Update()
     {
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(activationKey))
         {
-            if (shieldObject != null)
+            if (targetObject != null)
             {
-                // Toggle shield visibility
-                shieldObject.SetActive(!shieldObject.activeSelf);
+                targetObject.SetActive(true);
             }
         }
     }
-    private void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + input.normalized * speed * Time.deltaTime);
-    }
-
 }

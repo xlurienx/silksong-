@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class EnemyMovement : MonoBehaviour
         if (other.tag == "Enemy")
         {
             Destroy(gameObject);
+        }
+        if (other.tag == "Player")
+        {
+            SceneManager.LoadScene("EndScene");
         }
     }
 }
