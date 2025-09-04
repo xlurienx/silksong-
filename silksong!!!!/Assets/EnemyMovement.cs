@@ -36,7 +36,7 @@ public class EnemyMovement : MonoBehaviour
         }
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene("endscreen");
         }
     }
 }
