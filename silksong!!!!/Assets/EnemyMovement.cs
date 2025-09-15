@@ -4,20 +4,13 @@ using UnityEngine.SceneManagement;
 public class EnemyMovement : MonoBehaviour
 {
     public float speed = 4f;
-    private bool canMove;
+    public bool canMove = true;
 
-    public Transform shieldCheck;
-    public float shieldCheckRadius;
-    public LayerMask whatIsShield;
+
 
     void Update()
     {
-        canMove = Physics2D.OverlapCircle(shieldCheck.position, shieldCheckRadius, whatIsShield);
-
-        if (canMove)
-        {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-        }
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -26,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
         {
             speed *= -3f;
         }
-        if (other.tag == "Shore")
+        if (other.tag == "Delete")
         {
             Destroy(gameObject);
         }

@@ -4,7 +4,6 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public float spawnInterval = 2f;
-    public float enemySpeed = 2f;
 
     private Camera mainCamera;
     private float spawnY;

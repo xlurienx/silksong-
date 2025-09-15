@@ -7,16 +7,17 @@ TagManager:
   - Enemy
   - Shield
   - Shore
+  - Delete
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Shield
+  - Enemy
   - Water
   - UI
   - Player
   - Shore
-  - 
+  - Shield
   - 
   - 
   - 
