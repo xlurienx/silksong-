@@ -4,22 +4,22 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    public int health;
-    public int numOfHearts;
+    public int health; // heart variable
+    public int numOfHearts; //changing heart variable
 
-    public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
+    public Image[] hearts; // images
+    public Sprite fullHeart; // sprite variable
+    public Sprite emptyHeart; // sprite variable
 
     // Update is called once per frame
     void Update()
     {
-        if(health > numOfHearts)
+        if(health > numOfHearts) // to make sure player does not have more health than health containters
         {
             health = numOfHearts;
         }
 
-        for (int i = 0; i < hearts.Length; i++)
+        for (int i = 0; i < hearts.Length; i++) //health loop, dependent on what i (health) equals 
         {
             if(i < health)
             {
@@ -40,13 +40,13 @@ public class Health : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
-        if (health <= 0)
+        if (health <= 0) // change scene to restart game if health = 0
         {
             SceneManager.LoadScene("endscreen");
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) // health -1 if contact w enemy
     {
         if (other.tag == "Enemy")
         {

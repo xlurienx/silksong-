@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class destoryenemy : MonoBehaviour
+public class endbutton : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -9,16 +10,9 @@ public class destoryenemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void ChangeScene()
     {
-        
-    }
-
-        void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Enemy")
-        {
-            Destroy(other);
-        }
+    // loads the scene on button press
+        SceneManager.LoadScene(1);
     }
 }
