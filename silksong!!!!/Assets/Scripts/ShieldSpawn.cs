@@ -5,7 +5,7 @@ public class ShieldSpawn : MonoBehaviour
 {
     public GameObject Shield; // referencing shield
     public int ShieldTimer = 300; // time allowed to have shield up
-    public bool isShielded = false; //
+    public bool isShielded = false; // making shield accessible
 
     public Sprite spriteA; // Default sprite
     public Sprite spriteB; // Sprite to show after spacebar

@@ -21,13 +21,10 @@ public class EnemyMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (other.tag == "Enemy") // deletes enemy tag
+        if (other.tag == "Player") // deletes enemy tag
         {
             Destroy(gameObject);
         }
-        if (other.tag == "Player") //loads the end screen
-        {
-            SceneManager.LoadScene("endscreen");
-        }
+
     }
 }

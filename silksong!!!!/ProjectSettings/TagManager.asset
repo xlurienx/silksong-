@@ -8,6 +8,7 @@ TagManager:
   - Shield
   - Shore
   - Delete
+  - health+
   layers:
   - Default
   - TransparentFX

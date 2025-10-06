@@ -61,15 +61,18 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.36f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/spawner.cs" />
     <Compile Include="Assets/Scripts/EnemyMovement.cs" />
-    <Compile Include="Assets/enemycollisiondestroy.cs" />
-    <Compile Include="Assets/randomsprite.cs" />
+    <Compile Include="Assets/Scripts/coinspawn.cs" />
+    <Compile Include="Assets/Scripts/enemycollisiondestroy.cs" />
+    <Compile Include="Assets/Scripts/playerhealth.cs" />
     <Compile Include="Assets/Scripts/StartButton.cs" />
     <Compile Include="Assets/Scripts/Health.cs" />
-    <Compile Include="Assets/endbutton.cs" />
     <Compile Include="Assets/Scripts/EnemySpawner.cs" />
     <Compile Include="Assets/Scripts/ShieldSpawn.cs" />
     <Compile Include="Assets/Scripts/movement.cs" />
+    <Compile Include="Assets/Scripts/randomsprite.cs" />
+    <Compile Include="Assets/Scripts/endbutton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
