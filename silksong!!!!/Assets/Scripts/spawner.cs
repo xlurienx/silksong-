@@ -6,7 +6,7 @@ public class spawner : MonoBehaviour
     public GameObject objectToSpawn;   // The prefab to spawn
     public float spawnInterval = 15f;  // time between spawns (seconds)
 
-    [Header("Spawn Area (World Coordinates)")]
+    [Header("Spawn Area (World Coordinates)")] //editable coordinates 
     public float minX = -5f;
     public float maxX = 5f;
     public float minY = -3f;
@@ -31,7 +31,7 @@ public class spawner : MonoBehaviour
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
 
-        Vector2 spawnPosition = new Vector2(randomX, randomY);
+        Vector2 spawnPosition = new Vector2(randomX, randomY); //randomly spawns
 
         // instantiate the object
         Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
