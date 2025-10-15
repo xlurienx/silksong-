@@ -18,7 +18,7 @@ public class TopDownMovement : MonoBehaviour
 
     void Update()
     {
-        if (isDashing)
+        if (isDashing) 
         {
             return;
         }
