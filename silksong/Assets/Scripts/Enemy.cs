@@ -18,14 +18,19 @@ public class Enemy : MonoBehaviour
             speed *= -3f;
         }
        
-        if (other.tag == "Player") // If touches player
+       
+        if (other.gameObject.TryGetComponent(out PlayerKnockback playerKnockback))
         {
-            PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>(); // grabs the players health
-            playerHealth.TakeDamage(1);
-            PlayerKnockback playerKnockback = other.gameObject.GetComponent<PlayerKnockback>(); // grabes the players Knockback
+
             playerKnockback.Knockback(playerKnockback.transform.position - transform.position); //Knocks the player back away from enemy
-            Destroy(gameObject);
         }
+
+
+        if(other.gameObject.TryGetComponent(out Health health))
+        {
+            health.TakeDamage(1);
+            Destroy(gameObject);
+        }    
 
     }
 }
