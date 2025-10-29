@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 input;
 
+    
     void Update()
     {
         if (isDashing) 
