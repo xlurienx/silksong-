@@ -1602,6 +1602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa95a9cd5f21234481a70721967668f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelDuration: 5
+  isLevelFinished: 0
+  nextLevelName: mainscene
   playerHealth: {fileID: 2030669157}
   shoreHealth: {fileID: 1118575186}
 --- !u!4 &1822517137
