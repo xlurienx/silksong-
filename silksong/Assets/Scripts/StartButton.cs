@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
+    public string Level1Scene;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,6 +14,6 @@ public class StartButton : MonoBehaviour
     public void ChangeScene()
     {
     // loads the scene on button press
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(Level1Scene);
     }
 }

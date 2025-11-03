@@ -14,9 +14,9 @@ public class PlayerMovement : MonoBehaviour
     private float dashingTime = 0.2f; // time period of dash
     private float dashingCooldown = 1f; // dash cooldown (1 second)
     public float MaxSpeed = 5; // Player's Max speed
-
+    public float Friction = 0.9f;
     Vector2 input;
-
+    public Animator animator;
     
     void Update()
     {
@@ -42,12 +42,28 @@ public class PlayerMovement : MonoBehaviour
         }
         // speed formula
         // rb.MovePosition(rb.position + input.normalized * speed * Time.deltaTime); 
-        rb.AddForce(input.normalized * speed);
+        if(input == Vector2.zero)
+        {
+            rb.linearVelocity *= Friction;
+        }
+        else
+        {
+            rb.AddForce(input.normalized * speed);
+        }
+
+       
         if (rb.linearVelocity.magnitude > MaxSpeed)
         {
             rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, MaxSpeed); // This will cap the player's max speed if exceeded.
         }
-
+        if (rb.linearVelocity.magnitude >0.5f)
+        {
+            animator.SetBool("IsMoving",true);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
     }
 
     private IEnumerator Dash()
