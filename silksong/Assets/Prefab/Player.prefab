@@ -203,6 +203,7 @@ MonoBehaviour:
   spriteA: {fileID: -5903477578860805964, guid: 0ee4a7f3e8a34471eacb450089d160b5, type: 3}
   spriteB: {fileID: 4388650664785405, guid: d75af39485eb84d748680e6c21bbf810, type: 3}
   displayTime: 3
+  animator: {fileID: 2835325226885322697}
 --- !u!114 &7054119623227911084
 MonoBehaviour:
   m_ObjectHideFlags: 0
