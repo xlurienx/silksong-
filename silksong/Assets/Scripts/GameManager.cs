@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (timer > levelDuration)
+        if (timer > levelDuration) // when level is done 
         {
             if (!isLevelFinished)
             {
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    private void FinishLevel ()
+    private void FinishLevel () // load next
     {
         SceneManager.LoadScene(nextLevelName);
     }

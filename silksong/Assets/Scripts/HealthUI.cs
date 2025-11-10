@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class HealthUI : MonoBehaviour
 {
-    public Health playerHealth;
+    //tools for UI
+    public Health playerHealth; 
     public GameObject heartPrefab;
     private List<GameObject> spawnedHearts = new List<GameObject>();
     private void Start()
@@ -17,7 +18,7 @@ public class HealthUI : MonoBehaviour
     {
         playerHealth.OnDamageTaken -= UpdateHearts;
     }
-    private void UpdateHearts()
+    private void UpdateHearts() //on damage lose hearts
     {
         for (int i = 0;i < spawnedHearts.Count;i++)
         {
