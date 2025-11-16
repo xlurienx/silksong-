@@ -16,7 +16,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (IsDead) // Don't do anything if dead already
+        if (IsDead) // Don't do anything if already dead 
         {
             return;
         }
